@@ -1583,12 +1583,12 @@
             <div class="controls">
                 <div class="control-row">
                     <input type="text" v-model="searchQuery" placeholder="Search films..." />
-                    <button @click="openAddModal">+ Add Film/Show</button>
-                    <button class="secondary" @click="clearSearch" v-if="searchQuery">Clear</button>
+                    <!--button @click="openAddModal">+ Add Film/Show</button>
+                    <button class="secondary" @click="clearSearch" v-if="searchQuery">Clear</button-->
                 </div>
 
                 <!-- Collapsible Tags Section -->
-                <div v-if="allTagsFromFilms.length > 0">
+                <!--div v-if="allTagsFromFilms.length > 0">
                     <div class="tags-collapse-header" @click="tagsExpanded = !tagsExpanded">
                         <span class="collapse-icon" :class="{ collapsed: !tagsExpanded }">▼</span>
                         <span>Filter by tag ({{ selectedTags.length }} active)</span>
@@ -1606,7 +1606,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div-->
             </div>
 
             <div class="table-wrapper" v-if="filteredFilms.length > 0">
