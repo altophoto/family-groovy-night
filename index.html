@@ -813,8 +813,7 @@
         }
 
         .table-wrapper {
-            width: 100vw;
-            /*width: 100%;*/
+            width: 100%;
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
             background: #1a1a1a;
@@ -1630,10 +1629,10 @@
                             <th v-if="visibleColumns.platformLink_GoogleDrive" class="no-sort center-text">📺G</th>
                             <th v-if="visibleColumns.platformLink_iTunes" class="no-sort center-text">📺i</th>
                             <th v-if="visibleColumns.platformLink_AmazonPrime" class="no-sort center-text">📺A</th>
-                            <th v-if="visibleColumns.podcast" class="no-sort center-text">🎧</th>
+                            <th v-if="visibleColumns.podcast" class="no-sort center-text">🎧</th-->
                             <th v-if="visibleColumns.dateAdded" @click="sortBy('dateAdded')"
                                 :class="sortClass('dateAdded')">Added</th>
-                            <th v-if="visibleColumns.tags" class="no-sort">Tags</th-->
+                            <th v-if="visibleColumns.tags" class="no-sort">Tags</th>
                             <th v-if="visibleColumns.startTime" @click="sortBy('startTime')"
                                 :class="sortClass('startTime')">Start Time</th>
                             <th v-if="visibleColumns.actions" class="no-sort">Actions</th>
