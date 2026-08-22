@@ -1556,7 +1556,7 @@
             <p>Loading your film collection...</p>
         </div>
 
-        <!-- Navigation 🟢Import/Export↕️Settings⚙️Film Log📽️📊 Statistic-->
+        <!-- Navigation ➕Film 🟢Import/Export↕️Settings⚙️Film Log📽️📊 Statistic-->
         <div v-if="githubToken || currentView === 'settings'" class="nav">
             <button @click="currentView = 'log'" :class="{ active: currentView === 'log' }" :disabled="!githubToken">
                 📽️
@@ -1574,7 +1574,7 @@
             </button>
             <!-- Auto-fill button -->
             <button type="button" class="autofill-btn" @click="openSearchModal">
-                ➕Film
+                🟢
             </button>
         </div>
 
