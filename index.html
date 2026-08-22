@@ -1539,7 +1539,13 @@
             {{ syncStatus }}
         </div>
         <div v-if="!syncStatus" class="sync-status" :class="syncStatusClass">
-            Sync Status
+             <!-- Auto-fill button -->
+                    <div class="form-group" v-if="tmdbApiKey">
+                        <button type="button" class="autofill-btn" @click="openSearchModal">
+                            🔍 Search & Auto-Fill from TMDb
+                        </button>
+                        <small>Automatically fill director, year, runtime, and IMDB link</small>
+                    </div>
         </div>
         
 
@@ -1567,7 +1573,7 @@
             </button>
             <button @click="currentView = 'import'" :class="{ active: currentView === 'import' }"
                 :disabled="!githubToken">
-                Import/Export
+                Data
             </button>
             <button @click="currentView = 'settings'" :class="{ active: currentView === 'settings' }">
                 Settings
