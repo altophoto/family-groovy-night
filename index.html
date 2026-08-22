@@ -2171,7 +2171,7 @@
                         </select>
                     </div>
 
-                    <!--div class="form-group">
+                    <div class="form-group">
                         <div class="tag-selector" v-if="predefinedDirectors.length > 0">
                             <label class="tag-selector-label">{{ filmForm.type === 'tv' ? 'Creator/Showrunner' :
                                 'Director' }}</label>
@@ -2200,7 +2200,7 @@
                         <input type="number" v-model.number="filmForm.duration" min="1" placeholder="142" required
                             tabindex="10" />
                         <small v-if="filmForm.type === 'tv'">Episode runtime</small>
-                    </div-->
+                    </div>
 
                     <div class="form-group">
                         <label>Streaming Link</label>
@@ -2232,7 +2232,7 @@
                         <small>Direct link to watch 1080p files</small>
                     </div>
                     
-                    <!--div class="form-group">
+                    <div class="form-group">
                         <label>Streaming Link Drive</label>
                         <input type="url" v-model="filmForm.platformLink_GoogleDrive" placeholder="https://..." tabindex="16" />
                         <small>Direct link to watch Google Drive files (https://drive.google.com...)</small>
@@ -2260,7 +2260,7 @@
                         <label>Date Added</label>
                         <input type="date" v-model="filmForm.dateAdded" readonly tabindex="-1" />
                         <small>This date is locked and shows when the title was originally added</small>
-                    </div-->
+                    </div>
 
                     <div class="form-group">
                         <div v-for="(tags, category) in tagCategories" :key="category" class="tag-selector">
@@ -2375,19 +2375,19 @@
                         type: true,
                         film: true,
                         year: true,
-                        director: true,
+                        director: false,
                         duration: true,
-                        streaming: true,
-                        platformLink_0m3u8: true,
-                        platformLink_0480p: true,
-                        platformLink_0720p: true,
-                        platformLink_1080p: true,
-                        platformLink_GoogleDrive: true,
-                        platformLink_iTunes: true,
-                        platformLink_AmazonPrime: true,
-                        podcast: true,
+                        streaming: false,
+                        platformLink_0m3u8: false,
+                        platformLink_0480p: false,
+                        platformLink_0720p: false,
+                        platformLink_1080p: false,
+                        platformLink_GoogleDrive: false,
+                        platformLink_iTunes: false,
+                        platformLink_AmazonPrime: false,
+                        podcast: false,
                         dateAdded: true,
-                        tags: true,
+                        tags: false,
                         startTime: true,
                         actions: true
                     },
@@ -2433,8 +2433,8 @@
                     csvMessage: '',
                     csvSuccess: false,
                     lastTinkered: new Date().toLocaleString(),
-                    schoolNightEndTime: '20:00',
-                    weekendNightEndTime: '22:00',
+                    schoolNightEndTime: '22:00',
+                    weekendNightEndTime: '23:30',
                     loading: false,
                     syncStatus: '',
                     syncStatusClass: '',
