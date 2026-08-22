@@ -1617,8 +1617,8 @@
                             <th v-if="visibleColumns.type" @click="sortBy('type')" :class="sortClass('type')">Type</th>
                             <th v-if="visibleColumns.film" @click="sortBy('film')" :class="sortClass('film')">Title</th>
                             <th v-if="visibleColumns.year" @click="sortBy('year')" :class="sortClass('year')">Year</th>
-                            <th v-if="visibleColumns.director" @click="sortBy('director')"
-                                :class="sortClass('director')">Director</th>
+                            <!--th v-if="visibleColumns.director" @click="sortBy('director')"
+                                :class="sortClass('director')">Director</th-->
                             <th v-if="visibleColumns.duration" @click="sortBy('duration')"
                                 :class="sortClass('duration')">Duration</th>
                             <!--th v-if="visibleColumns.streaming" class="no-sort center-text">📺</th>
@@ -1632,7 +1632,7 @@
                             <th v-if="visibleColumns.podcast" class="no-sort center-text">🎧</th-->
                             <th v-if="visibleColumns.dateAdded" @click="sortBy('dateAdded')"
                                 :class="sortClass('dateAdded')">Added</th>
-                            <th v-if="visibleColumns.tags" class="no-sort">Tags</th>
+                            <!--th v-if="visibleColumns.tags" class="no-sort">Tags</th-->
                             <th v-if="visibleColumns.startTime" @click="sortBy('startTime')"
                                 :class="sortClass('startTime')">Start Time</th>
                             <th v-if="visibleColumns.actions" class="no-sort">Actions</th>
@@ -1650,7 +1650,7 @@
                                 <span v-if="film.type === 'tv'" class="type-badge">TV</span>
                             </td>
                             <td v-if="visibleColumns.year">{{ film.year || '-' }}</td>
-                            <td v-if="visibleColumns.director">{{ film.director || '-' }}</td>
+                            <!--td v-if="visibleColumns.director">{{ film.director || '-' }}</td-->
                             <td v-if="visibleColumns.duration">{{ film.duration }} min</td>
                             <!--td v-if="visibleColumns.streaming" class="center-text">
                                 <a v-if="film.platformLink" :href="film.platformLink" target="_blank"
@@ -1716,14 +1716,14 @@
                                 <span v-else class="podcast-icon inactive">🎧</span>
                             </td-->
                             <td v-if="visibleColumns.dateAdded">{{ formatDate(film.dateAdded) }}</td>
-                            <td v-if="visibleColumns.tags">
+                            <!--td v-if="visibleColumns.tags">
                                 <div class="tags-cell">
                                     <span class="tag-badge" :class="{ 'special-tag': isSpecialTag(tag) }"
                                         v-for="tag in film.tags" :key="tag">
                                         {{ formatTag(tag) }}
                                     </span>
                                 </div>
-                            </td>
+                            </td-->
                             <td v-if="visibleColumns.startTime" class="start-time">{{ calculateStartTime(film.duration)
                                 }}</td>
                             <td v-if="visibleColumns.actions">
