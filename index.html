@@ -1559,11 +1559,11 @@
         <!-- Navigation -->
         <div v-if="githubToken || currentView === 'settings'" class="nav">
             <button @click="currentView = 'log'" :class="{ active: currentView === 'log' }" :disabled="!githubToken">
-                Film Log
+                Log
             </button>
             <button @click="currentView = 'stats'" :class="{ active: currentView === 'stats' }"
                 :disabled="!githubToken">
-                Statistics
+                Stats
             </button>
             <button @click="currentView = 'import'" :class="{ active: currentView === 'import' }"
                 :disabled="!githubToken">
@@ -1621,20 +1621,18 @@
                                 :class="sortClass('director')">Director</th>
                             <th v-if="visibleColumns.duration" @click="sortBy('duration')"
                                 :class="sortClass('duration')">Duration</th>
-                            <th v-if="visibleColumns.streaming" class="no-sort center-text">📺</th>
-                            <!-- HERE -->
-                             <th v-if="visibleColumns.platformLink_0m3u8" class="no-sort center-text">📺0m</th>
+                            <!--th v-if="visibleColumns.streaming" class="no-sort center-text">📺</th>
+                            <th v-if="visibleColumns.platformLink_0m3u8" class="no-sort center-text">📺0m</th>
                             <th v-if="visibleColumns.platformLink_0480p" class="no-sort center-text">📺04</th>
                             <th v-if="visibleColumns.platformLink_0720p" class="no-sort center-text">📺07</th>
                             <th v-if="visibleColumns.platformLink_1080p" class="no-sort center-text">📺10</th>
                             <th v-if="visibleColumns.platformLink_GoogleDrive" class="no-sort center-text">📺G</th>
                             <th v-if="visibleColumns.platformLink_iTunes" class="no-sort center-text">📺i</th>
                             <th v-if="visibleColumns.platformLink_AmazonPrime" class="no-sort center-text">📺A</th>
-                            <!-- HERE -->
                             <th v-if="visibleColumns.podcast" class="no-sort center-text">🎧</th>
                             <th v-if="visibleColumns.dateAdded" @click="sortBy('dateAdded')"
                                 :class="sortClass('dateAdded')">Added</th>
-                            <th v-if="visibleColumns.tags" class="no-sort">Tags</th>
+                            <th v-if="visibleColumns.tags" class="no-sort">Tags</th-->
                             <th v-if="visibleColumns.startTime" @click="sortBy('startTime')"
                                 :class="sortClass('startTime')">Start Time</th>
                             <th v-if="visibleColumns.actions" class="no-sort">Actions</th>
@@ -1654,14 +1652,13 @@
                             <td v-if="visibleColumns.year">{{ film.year || '-' }}</td>
                             <td v-if="visibleColumns.director">{{ film.director || '-' }}</td>
                             <td v-if="visibleColumns.duration">{{ film.duration }} min</td>
-                            <td v-if="visibleColumns.streaming" class="center-text">
+                            <!--td v-if="visibleColumns.streaming" class="center-text">
                                 <a v-if="film.platformLink" :href="film.platformLink" target="_blank"
                                     class="stream-icon" title="Watch online" @click.stop>
                                     📺
                                 </a>
                                 <span v-else class="stream-icon inactive">📺</span>
                             </td>
-                            <!-- HERE -->
                              <td v-if="visibleColumns.platformLink_0m3u8" class="center-text">
                                 <a v-if="film.platformLink_0m3u8" :href="film.platformLink_0m3u8" target="_blank"
                                     class="stream-icon" title="Watch online" @click.stop>
@@ -1711,14 +1708,13 @@
                                 </a>
                                 <span v-else class="stream-icon inactive">📺</span>
                             </td>
-                             <!-- HERE -->
                             <td v-if="visibleColumns.podcast" class="center-text">
                                 <a v-if="film.podcastLink" :href="film.podcastLink" target="_blank" class="podcast-icon"
                                     title="Listen to podcast" @click.stop>
                                     🎧
                                 </a>
                                 <span v-else class="podcast-icon inactive">🎧</span>
-                            </td>
+                            </td-->
                             <td v-if="visibleColumns.dateAdded">{{ formatDate(film.dateAdded) }}</td>
                             <td v-if="visibleColumns.tags">
                                 <div class="tags-cell">
