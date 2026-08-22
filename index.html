@@ -1539,13 +1539,7 @@
             {{ syncStatus }}
         </div>
         <div v-if="!syncStatus" class="sync-status" :class="syncStatusClass">
-             <!-- Auto-fill button -->
-                    <div class="form-group" v-if="tmdbApiKey">
-                        <button type="button" class="autofill-btn" @click="openSearchModal">
-                            🔍 Search & Auto-Fill from TMDb
-                        </button>
-                        <small>Automatically fill director, year, runtime, and IMDB link</small>
-                    </div>
+             Sync Status
         </div>
         
 
@@ -1577,6 +1571,10 @@
             </button>
             <button @click="currentView = 'settings'" :class="{ active: currentView === 'settings' }">
                 Settings
+            </button>
+            <!-- Auto-fill button -->
+            <button type="button" class="autofill-btn" @click="openSearchModal">
+                Add Film
             </button>
         </div>
 
